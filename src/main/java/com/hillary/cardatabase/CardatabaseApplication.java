@@ -30,4 +30,41 @@ public class CardatabaseApplication {
  * dependencies is separated from client's behavior, which makes unit testing
  * easier.
  * 
+ * Types of DI
+ * 1. Constructor injection :- Dependencies are passed to a client class
+ * Constructor
+ * public class Car {
+ * private Owner owner;
+ * 
+ * public Car(Owner owner) {
+ * this.owner = owner;
+ * }
+ * }
+ * 2. Setter injection :- Dependencies are provided through setters.
+ * 
+ * public class Car {
+ * private Owner owner;
+ * 
+ * public void setOwner(Owner owner) {
+ * this.owner = owner;
+ * }
+ * }
+ * here the dependency is now passed in the setter as an argument
+ * 
+ */
+
+/**
+ * 
+ * USING DI IN SPRING BOOT
+ * Spring boot scans your application classes and registers classes with certain
+ * annotations (@service, @repository, @controller) as spring beans. The beans
+ * can then be injected using an @Autowired annotations
+ *
+ * public class Car {
+ * 
+ * @Autowired
+ *            private Owner owner;
+ *            }
+ * 
+ * 
  */
