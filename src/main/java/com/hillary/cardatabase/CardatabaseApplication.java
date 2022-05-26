@@ -94,3 +94,31 @@ public class CardatabaseApplication {
  * 1. BeanFactory.
  * 2. Application context
  */
+
+/**
+ * 
+ * Basics of ORM, JPA, and Hibernate
+ * ORM is a technique that allows you to fetch from and manipulate a database by
+ * using an object-oriented
+ * paradigm.
+ * 
+ * 
+ * Java Persistent Api provides object rlational mapping for java developers.
+ * 
+ * The JPA entity is a java class that presents the structure of a database
+ * table.
+ * The fields of an entity class present the columns of the database tables.
+ * 
+ * Hibernate is the most popular java based JPA implementation an is used in
+ * spring boot by default.
+ * 
+ * 
+ * Creating the entity class
+ * An entity class is a simple java class that is annotated with JPA's @Entity
+ * annotations.
+ * Entity classes use the standard javabean naming conventions and have proper
+ * getter and setter methods
+ * JPA creates a database table called by the name of the class when the
+ * application is initialized.
+ * If you want to use some other name for the database table, you can use the @Table annotations in your entity class.
+ */
