@@ -68,3 +68,29 @@ public class CardatabaseApplication {
  * 
  * 
  */
+
+/**
+ * The spring framework comprises several modules such as IOC, AOP, DAO,
+ * Context, ORM, WEB MVC
+ */
+
+/**
+ * Inversion of Control and Dependency injection
+ * These are the design patterns that are used to remove dependency from the
+ * programming code. They make code easier to test and maintain
+ */
+
+/**
+ * IoC container is responsible to instantiate, configure and assemble the
+ * objetcs, the IOC container gets information from the XML file and work
+ * accordingly
+ * 
+ * Main tasks are
+ * 1. To instantiate the application class.
+ * 2. To configure the object.
+ * 3. To assemble the dependencies between objetcs.
+ * 
+ * There are two types of IOC containers
+ * 1. BeanFactory.
+ * 2. Application context
+ */
