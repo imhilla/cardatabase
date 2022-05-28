@@ -1,17 +1,28 @@
 package com.hillary.cardatabase;
 
+import com.hillary.cardatabase.domain.CarRepository;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CardatabaseApplication {
+public class CardatabaseApplication implements CommandLineRunner {
 	private static final Logger logger = LoggerFactory.getLogger(CardatabaseApplication.class);
+	@Autowired
+	private CarRepository repository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(CardatabaseApplication.class, args);
 		logger.info("Cardatabase started, we are tracking the app");
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+
 	}
 };
 
@@ -120,5 +131,6 @@ public class CardatabaseApplication {
  * getter and setter methods
  * JPA creates a database table called by the name of the class when the
  * application is initialized.
- * If you want to use some other name for the database table, you can use the @Table annotations in your entity class.
+ * If you want to use some other name for the database table, you can use
+ * the @Table annotations in your entity class.
  */
