@@ -109,7 +109,7 @@ public class CardatabaseApplication {
  * table.
  * The fields of an entity class present the columns of the database tables.
  * 
- * Hibernate is the most popular java based JPA implementation an is used in
+ * Hibernate is the most popular java based JPA implementation and is used in
  * spring boot by default.
  * 
  * 

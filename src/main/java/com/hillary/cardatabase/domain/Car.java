@@ -2,7 +2,6 @@ package com.hillary.cardatabase.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GenerationType;
-
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
@@ -13,9 +12,6 @@ public class Car {
   private long id;
   private String brand, model, color, registerNumber;
   private int year, price;
-
-  public Car() {
-  }
 
   public Car(String brand, String model, String color, int year, int price) {
     super();
