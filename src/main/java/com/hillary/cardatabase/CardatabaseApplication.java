@@ -1,5 +1,6 @@
 package com.hillary.cardatabase;
 
+import com.hillary.cardatabase.domain.Car;
 import com.hillary.cardatabase.domain.CarRepository;
 
 import org.slf4j.Logger;
@@ -22,7 +23,11 @@ public class CardatabaseApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-
+		repository.save(new Car("Ford", "Mustang", "Red", " ADF-1121", 2021, 59000));
+		repository.save(new Car("Nissan", "Leaf", "White", " ADF-1121", 2021, 59000));
+		for (Car car : repository.findAll()) {
+			logger.info(car.getBrand() + " " + car.getModel());
+		}
 	}
 };
 

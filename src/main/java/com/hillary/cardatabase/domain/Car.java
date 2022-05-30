@@ -13,8 +13,8 @@ public class Car {
   private String brand, model, color, registerNumber;
   private int year, price;
 
-  public Car(String brand, String model, String color, int year, int price) {
-    super();
+  public Car(String brand, String model, String color, String string, int year, int price) {
+    super(); // super is used to invoke parent class constructor
     this.brand = brand;
     this.model = model;
     this.color = color;
