@@ -1,7 +1,11 @@
 package com.hillary.cardatabase;
 
+import java.util.Arrays;
+
 import com.hillary.cardatabase.domain.Car;
 import com.hillary.cardatabase.domain.CarRepository;
+import com.hillary.cardatabase.domain.Owner;
+import com.hillary.cardatabase.domain.OwnerRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,6 +20,9 @@ public class CardatabaseApplication implements CommandLineRunner {
 	@Autowired
 	private CarRepository repository;
 
+	@Autowired
+	private OwnerRepository orepository;
+
 	public static void main(String[] args) {
 		SpringApplication.run(CardatabaseApplication.class, args);
 		logger.info("Cardatabase started, we are tracking the app");
@@ -23,8 +30,13 @@ public class CardatabaseApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		repository.save(new Car("Ford", "Mustang", "Red", " ADF-1121", 2021, 59000));
-		repository.save(new Car("Nissan", "Leaf", "White", " ADF-1121", 2021, 59000));
+		Owner owner1 = new Owner("John", "Johnson");
+		Owner owner2 = new Owner("Mary", "Robinson");
+		orepository.saveAll(Arrays.asList(owner1, owner2));
+		Car car1 = new Car("Ford", "Mustang", "Red", "ADF-1121", 2021, 5900, owner1);
+		Car car2 = new Car("Nissan", "Leaf", "White", "SSJ-3002", 2022, 5900, owner2);
+		Car car3 = new Car("Toyota", "Priush", "Silver", "KKO-0212", 2020, 3900, owner2);
+		repository.saveAll(Arrays.asList(car1, car2, car3));
 		for (Car car : repository.findAll()) {
 			logger.info(car.getBrand() + " " + car.getModel());
 		}

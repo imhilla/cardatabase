@@ -16,7 +16,7 @@ public class Car {
   private String brand, model, color, registerNumber;
   private int year, price;
 
-  public Car(String brand, String model, String color, String string, int year, int price, Owner owner) {
+  public Car(String brand, String model, String color, String registerNumber, int year, int price, Owner owner) {
     super(); // super is used to invoke parent class constructor
     this.brand = brand;
     this.model = model;
@@ -24,6 +24,7 @@ public class Car {
     this.year = year;
     this.price = price;
     this.owner = owner;
+    this.registerNumber = registerNumber;
   }
 
   @ManyToOne(fetch = FetchType.LAZY)
